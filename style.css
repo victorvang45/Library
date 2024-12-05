@@ -1,26 +1,83 @@
-
 * {
     margin: 0;
     padding: 0;
 }
 
-.container, .book-container {
+body {
+    background-color: #31394e;
+    color: #ccc;
+}
+
+header {
+    background-color: #1a1e2b;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
+    color: #ccc;
+}
+
+.container,
+.book-container {
     max-width: 1400px;
     padding: 20px;
     margin: 0 auto;
 }
 
+
+
 .main {
     text-align: center;
+    padding: 20px;
+}
+
+.add-btn {
+    background-color: #1e2231;
+    color: #ccc;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-size: 20px;
 }
 
 .book-container {
-    display:grid;
-    grid-template-columns: repeat(4,minmax(340px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(4, minmax(340px, 1fr));
 }
 
 
 .book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
+    background-color: #1e2231;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 18px;
+}
 
-    background-color: blue;
+.toggle {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    
+
+}
+
+.toggle button {
+    color:white;
+    flex: 1;
+    padding: 10px 25px;
+    border: none;
+    box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.toggle-read {
+    background-color: #29a759;
+}
+
+.delete-btn {
+    background-color: #c43724;
 }
