@@ -1,0 +1,26 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container, .book-container {
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.main {
+    text-align: center;
+}
+
+.book-container {
+    display:grid;
+    grid-template-columns: repeat(4,minmax(340px, 1fr));
+}
+
+
+.book-card {
+
+    background-color: blue;
+}
