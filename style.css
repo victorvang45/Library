@@ -4,12 +4,12 @@
 }
 
 body {
-    background-color: #31394e;
+    background-color: rgba(49, 57, 78, 1);
     color: #ccc;
 }
 
 header {
-    background-color: #1a1e2b;
+    background-color: rgba(26, 30, 43, 1);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
     color: #ccc;
 }
@@ -28,8 +28,10 @@ header {
     padding: 20px;
 }
 
+
+
 .add-btn {
-    background-color: #1e2231;
+    background-color: rgba(30, 34, 49, 1);
     color: #ccc;
     padding: 10px 25px;
     border: none;
@@ -41,6 +43,7 @@ header {
 .book-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(340px, 1fr));
+    gap: 20px;
 }
 
 
@@ -49,8 +52,9 @@ header {
     flex-direction: column;
     gap: 25px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
-    background-color: #1e2231;
+    background-color: rgba(30, 34, 49, 1);
     padding: 20px;
+    justify-content: space-between;
     border-radius: 4px;
     font-size: 18px;
 }
@@ -60,14 +64,14 @@ header {
     flex-direction: row;
     width: 100%;
     gap: 20px;
+    justify-content: center;
     
 
 }
 
 .toggle button {
     color:white;
-    flex: 1;
-    padding: 10px 25px;
+    padding: 12px 40px;
     border: none;
     box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
@@ -75,9 +79,69 @@ header {
 }
 
 .toggle-read {
-    background-color: #29a759;
+    background-color: rgba(41, 167, 89, 1);
 }
 
 .delete-btn {
-    background-color: #c43724;
+    background-color: rgba(196, 55, 36, 1);
+}
+
+button:hover{
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+.modal-container {
+   
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    display:none;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.modal {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 30, 43, 1);
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
+    padding: 20px 40px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.modal h2 {
+    text-align: center;
+}
+
+
+.modal input {
+    color:white;
+    background-color: rgba(49, 57, 78, 1);
+    border-radius: 5px;
+    border: 2px solid rgba(49, 57, 78, 1); ;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .8);
+    font-size: 18px;
+
+}
+
+.modal label{
+    font-size: 18px;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }

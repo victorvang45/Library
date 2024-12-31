@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -13,19 +15,42 @@
         </div>
     </header>
     <main class="main">
-        <button class="add-btn">Add Book</button>
-        <div class="book-container">
+        <button class="add-btn" id="add-book">Add Book</button>
+        <div class="book-container" id="book-display">
             <div class="book-card">
-                <h2>Title</h2>
-                <p>author</p>
-                <p>pages</p>
+                <h2>123</h2>
+                <p>victor</p>
+                <p>12 pages</p>
                 <div class="toggle">
                     <button class="toggle-read">Read</button>
                     <button class="delete-btn">Delete</button>
                 </div>
             </div>
+        
         </div>
     </main>
-    
+
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <form action="" method="get" id="book_form">
+                <h2> Add New Book</h2>
+                <input type="text" id="title" name="book_title" placeholder="Title" required />
+                <input type="text" id="author" name="book_author" placeholder="Author" required />
+                <input type="number" id="pages" name="book_pages" placeholder="Pages" required/>
+                <div>
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" id="readCheckBox" />
+                </div>
+                <div class="toggle">
+                    <button type="submit" class="toggle-read" id="submit-book">Submit</button>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
