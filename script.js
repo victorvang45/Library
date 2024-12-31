@@ -15,15 +15,20 @@ myLibrary.push(bookTest);
 
 // Toggling Read Button
 
+// Method to remove book from library array 
+function removeBook(book_title) {
+    myLibrary.splice(myLibrary.findIndex(book => book.title === book_title), 1);
+    console.log(myLibrary);
+}
 
-
-// Delete book card
+// Delete book card listener
 const deleteButtons = document.querySelectorAll('.delete-btn');
-console.log(deleteButtons);
 
 deleteButtons.forEach((deleteBook) => {
     deleteBook.addEventListener('click', () => {
+
         deleteBook.closest('.book-card')?.remove();
+        removeBook('123');
     });
 });
 
@@ -98,6 +103,7 @@ function createBookCard(Book) {
 
     bookRemove.addEventListener('click', () => {
         bookRemove.closest('.book-card')?.remove();
+        removeBook(bookTitle);
     });
 
 }
@@ -108,15 +114,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const tempObj = Array.from(document.querySelectorAll('#book_form input')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {});
-    console.log(tempObj);
-    console.log("Book OBJ");
-    const book = new Book(tempObj.title, tempObj.author, tempObj.pages, checkBoxState());
-    console.log(book);
+    const book = new Book(tempObj.title, tempObj.author, Number(tempObj.pages), checkBoxState());
+
     modal_container.classList.remove('show');
     createBookCard(book);
 
     myLibrary.push(book);
-    console.log(myLibrary);
     modal_container.style.display = "none";
 
 
