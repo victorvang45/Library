@@ -3,7 +3,7 @@ Things I have learned doing this project\
 -- Better git command line usage\
 -- More practice with how to create forms with html\
 -- Styling Forms and the input fields\
--- More practice with Javascript
+-- More practice with Javascript\
 -- Practice with javascript Objects
 
 Live Demo: https://victorvang45.github.io/Library/
