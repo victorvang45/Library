@@ -8,12 +8,18 @@ function Book(title, author, pages, read) {
 }
 
 
-
-const bookTest = new Book('123', 'victor', 12, true)
+/* Testing 
+const bookTest = new Book('123', 'victor', 12, false);
 myLibrary.push(bookTest);
 
 
 // Toggling Read Button
+
+const toggleButton = document.querySelector('.toggle-read');
+
+toggleButton.addEventListener('click', () => {
+    toggleButton.classList.toggle('active');
+});
 
 // Method to remove book from library array 
 function removeBook(book_title) {
@@ -32,6 +38,7 @@ deleteButtons.forEach((deleteBook) => {
     });
 });
 
+*/
 
 // Handling Modal Element
 const open = document.getElementById('add-book');
@@ -66,6 +73,7 @@ function checkBoxState() {
 }
 
 function createBookCard(Book) {
+   
     const example = document.createElement('div');
     example.className = 'book-card'
 
@@ -83,7 +91,11 @@ function createBookCard(Book) {
     bookButtonContainer.className = 'toggle';
     const bookRead = document.createElement('button');
     bookRead.className = 'toggle-read';
-    bookRead.textContent = 'Read';
+    bookRead.textContent = "Not Read";
+    if(Book.read) {
+        bookRead.textContent = "Read";
+        bookRead.classList.toggle('active');
+    }
     const bookRemove = document.createElement('button');
     bookRemove.className = 'delete-btn';
     bookRemove.textContent = 'Delete';
@@ -106,6 +118,17 @@ function createBookCard(Book) {
         removeBook(bookTitle);
     });
 
+    bookRead.addEventListener('click', () => {
+        Book.read = true;
+        bookRead.textContent = "Read";
+        bookRead.classList.toggle('active');
+        if (!bookRead.classList.contains("active")) {
+            // Change the value of the element
+            bookRead.textContent = "Not Read";
+            Book.read = false;
+          }
+    });
+
 }
 
 
@@ -121,8 +144,8 @@ form.addEventListener('submit', (e) => {
 
     myLibrary.push(book);
     modal_container.style.display = "none";
-
-
+    
+    form.reset();
 });
 
 

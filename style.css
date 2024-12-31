@@ -75,18 +75,29 @@ header {
     border: none;
     box-shadow: 0.5px 2px 3px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
-.toggle-read {
+.submit_btn {
+    transition: background-color 0.3s ease;
     background-color: rgba(41, 167, 89, 1);
 }
 
 .delete-btn {
+    transition: background-color 0.3s ease;
     background-color: rgba(196, 55, 36, 1);
+}
+.toggle-read {
+    transition: background-color 0.3s ease;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+.toggle-read.active {
+    transition: background-color 0.3s ease;
+    background-color: rgba(41, 167, 89, 1);
 }
 
 button:hover{
+    transition: background-color 0.3s ease;
     background-color:rgba(0, 0, 0, 0.1);
 }
 
